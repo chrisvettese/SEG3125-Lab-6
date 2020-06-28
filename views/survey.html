@@ -1,0 +1,86 @@
+<html>
+<head>
+    <title>Questionnaire</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+</head>
+
+<body>
+
+<div class="container-md p-3 my-3 border bg-dark text-white" id="survey">
+    <img class='image-flex amazon-image' src="assets/amazon.png" alt="Amazon">
+    <h1>Survey - <a href="https://amazon.ca">Amazon.ca</a></h1>
+    <br>
+    <form>
+        <h2>Please select one or more words that you would use to summarize the UI of Amazon.ca:</h2>
+        <div class="form-check">
+            <label>
+                <input type="checkbox" name="feature" value="Confusing">
+            </label> Confusing<br>
+            <label>
+                <input type="checkbox" name="feature" value="Simple">
+            </label> Simple<br>
+            <label>
+                <input type="checkbox" name="feature" value="Inefficient">
+            </label> Inefficient<br>
+            <label>
+                <input type="checkbox" name="feature" value="Appealing">
+            </label> Appealing<br>
+            <label>
+                <input type="checkbox" name="feature" value="Cluttered">
+            </label> Cluttered<br>
+        </div>
+        <br>
+        <h2>How does the ease of use of Amazon.ca compare to other similar websites you have visited?</h2>
+        <label for="sel1"></label><select class="form-control form-width" id="sel1">
+            <option>Easier to use</option>
+            <option>Harder to use</option>
+            <option>About the same</option>
+            <option>Unsure</option>
+        </select>
+        <br>
+        <h2>Which one of the following features did you find to be the most user-friendly?</h2>
+        <div class="form-check">
+            <label>
+                <input type="radio" name="feature" value="Home Page">
+            </label> Home Page<br>
+            <label>
+                <input type="radio" name="feature" value="Shopping Cart">
+            </label> Shopping Cart<br>
+            <label>
+                <input type="radio" name="feature" value="Search Feature">
+            </label> Search Feature<br>
+            <label>
+                <input type="radio" name="feature" value="Customer Support">
+            </label> Customer Support<br>
+        </div>
+        <br>
+        <h2>Enter the colour you noticed the most on Amazon.ca:</h2>
+        <label>
+            <input class='form-control' type="text" name="colour" placeholder="Colour">
+        </label>
+        <br><br>
+        <h2>Do you agree with the statement: "Amazon's delivery tracking service is well designed"?</h2>
+        Strongly disagree <input type="range" class="tracking-range" min="0" max="100" id="range"> Strongly agree
+        <br><br>
+        <h2>Enter how many times a month you use Amazon.ca:</h2>
+        <label>
+            <input class='form-control' type="number" name="times" placeholder="# of times">
+        </label>
+        <br><br>
+        <button type="submit" class="btn btn-warning" id="bb">Submit</button>
+        <p id="thanks"></p>
+    </form>
+</div>
+<script src="/assets/action.js"></script>
+<footer class="text-center">Website designed by Chris Vettese.</footer>
+</body>
+</html> 
