@@ -60,8 +60,8 @@ module.exports = function (app) {
     // will be recuperated here, parsed and used to update the data files
     app.post('/survey', urlencodedParser, function (req, res) {
         console.log(req.body);
-        var json = req.body;
-        for (var key in json) {
+        const json = req.body;
+        for (const key in json) {
             console.log(key + ": " + json[key]);
             // in the case of checkboxes, the user might check more than one
             if ((key === "color") && (json[key].length === 2)) {
