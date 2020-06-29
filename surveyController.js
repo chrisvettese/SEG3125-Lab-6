@@ -12,7 +12,7 @@ function readData(fileName) {
 
 // read the data file
 function writeData(info, fileName) {
-    data = JSON.stringify(info);
+    const data = JSON.stringify(info);
     fs.writeFileSync('./data/' + fileName + '.json', data);
 }
 
@@ -21,10 +21,10 @@ function writeData(info, fileName) {
 // I assume we always just add 1 to a single item
 function combineCounts(name, value) {
     // console.log(value);
-    info = readData(name);
+    const info = readData(name);
     // will be useful for text entry, since the item typed in might not be in the list
-    var found = 0;
-    for (var i = 0; i < info.length; i++) {
+    let found = 0;
+    for (let i = 0; i < info.length; i++) {
         if (info[i][name] === value) {
             info[i].count = parseInt(info[i].count) + 1;
             found = 1;
@@ -42,9 +42,9 @@ module.exports = function (app) {
     // when a user goes to localhost:3000/analysis
     // serve a template (ejs file) which will include the data from the data files
     app.get('/analysis', function (req, res) {
-        var color = readData("color");
-        var fruit = readData("fruit");
-        var animal = readData("animal");
+        const color = readData("color");
+        const fruit = readData("fruit");
+        const animal = readData("animal");
         res.render('showResults', {results: [color, fruit, animal]});
         console.log([color, fruit, animal]);
     });
@@ -64,12 +64,21 @@ module.exports = function (app) {
         for (const key in json) {
             console.log(key + ": " + json[key]);
             // in the case of checkboxes, the user might check more than one
-            if ((key === "color") && (json[key].length === 2)) {
-                for (var item in json[key]) {
-                    combineCounts(key, json[key][item]);
+            let fileName = key;
+            if (key === "summarize[]") {
+                fileName = "summarize";
+            }
+            //Special handling of checkboxes
+            if ((key === "summarize[]")) {
+                if (typeof json[key] === 'string') {
+                    combineCounts(fileName, json[key]);
+                } else {
+                    for (const item in json[key]) {
+                        combineCounts(fileName, json[key][item]);
+                    }
                 }
             } else {
-                combineCounts(key, json[key]);
+                combineCounts(fileName, json[key]);
             }
         }
         // mystery line... (if I take it out, the SUBMIT button does change)

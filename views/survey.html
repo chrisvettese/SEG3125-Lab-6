@@ -22,11 +22,11 @@
     <form>
         <h2>Please select one or more words that you would use to summarize the UI of Amazon.ca:</h2>
         <div class="form-check">
-            <input type="checkbox" name="summarize1" value="Confusing"> Confusing<br>
-            <input type="checkbox" name="summarize2" value="Simple"> Simple<br>
-            <input type="checkbox" name="summarize3" value="Inefficient"> Inefficient<br>
-            <input type="checkbox" name="summarize4" value="Appealing"> Appealing<br>
-            <input type="checkbox" name="summarize5" value="Cluttered"> Cluttered<br>
+            <input type="checkbox" name="summarize[]" value="Confusing"> Confusing<br>
+            <input type="checkbox" name="summarize[]" value="Simple"> Simple<br>
+            <input type="checkbox" name="summarize[]" value="Inefficient"> Inefficient<br>
+            <input type="checkbox" name="summarize[]" value="Appealing"> Appealing<br>
+            <input type="checkbox" name="summarize[]" value="Cluttered"> Cluttered<br>
         </div>
         <br>
         <h2>How does the ease of use of Amazon.ca compare to other similar websites you have visited?</h2>
@@ -53,7 +53,7 @@
             </label> Customer Support<br>
         </div>
         <br>
-        <h2>Enter the colour you noticed the most on Amazon.ca:</h2>
+        <h2>Enter the colour(s) you noticed the most on Amazon.ca:</h2>
         <label>
             <input class='form-control' type="text" name="colour" placeholder="Colour" required>
         </label>
@@ -62,7 +62,7 @@
         Strongly disagree <input type="range" class="tracking-range" min="0" max="100" id="range" name="tracking"> Strongly agree
         <br><br>
         <h2>Enter how many times a month you use Amazon.ca:</h2>
-        <input class='form-control' type="number" name="usage" placeholder="# of times" required>
+        <input class='form-control form-width' type="number" name="usage" placeholder="# of times" required>
         <br><br>
         <button type="submit" class="btn btn-warning" id="bb">Submit</button>
         <p id="thanks"></p>
