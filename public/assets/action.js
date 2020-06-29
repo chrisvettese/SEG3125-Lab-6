@@ -8,7 +8,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: 'POST',
-            url: '/survey',
+            url: '/niceSurvey',
             data: $(this).serializeArray(),
             success: function (data) {
                 // do something with the data via front-end framework
@@ -20,5 +20,12 @@ $(document).ready(function () {
             }
         });
         return false;
+    });
+
+
+    $('#num-in').on('keydown', e => {
+        if (!((e.keyCode > 95 && e.keyCode < 106) || (e.keyCode > 47 && e.keyCode < 58) || e.keyCode === 8)) {
+            return false;
+        }
     });
 });

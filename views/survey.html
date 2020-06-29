@@ -31,11 +31,11 @@
         <br>
         <h2>How does the ease of use of Amazon.ca compare to other similar websites you have visited?</h2>
         <select class="form-control form-width" id="ease-select" name="ease">
-        <option>Easier to use</option>
-        <option>Harder to use</option>
-        <option>About the same</option>
-        <option>Unsure</option>
-    </select>
+            <option>Easier to use</option>
+            <option>Harder to use</option>
+            <option>About the same</option>
+            <option>Unsure</option>
+        </select>
         <br>
         <h2>Which one of the following features did you find to be the most user-friendly?</h2>
         <div class="form-check">
@@ -59,10 +59,12 @@
         </label>
         <br><br>
         <h2>Do you agree with the statement: "Amazon's delivery tracking service is well designed"?</h2>
-        Strongly disagree <input type="range" class="tracking-range" min="0" max="100" id="range" name="tracking"> Strongly agree
+        Strongly disagree <input type="range" class="tracking-range" min="0" max="100" id="range" name="tracking">
+        Strongly agree
         <br><br>
         <h2>Enter how many times a month you use Amazon.ca:</h2>
-        <input class='form-control form-width' type="number" name="usage" placeholder="# of times" required>
+        <input class='form-control form-width' type="number" id='num-in' name="usage" placeholder="# of times" required
+               min="0">
         <br><br>
         <button type="submit" class="btn btn-warning" id="bb">Submit</button>
         <p id="thanks"></p>
