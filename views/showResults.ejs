@@ -5,23 +5,41 @@
 
 <body>
     <h1>Survey analysis</h1>
-    <h2>Colors</h2>
+    <h2>Words that summarize the UI</h2>
     <ul>
-    <% for (var i=0; i<results[0].length; i++){ %>
-        <li><%= results[0][i].color %> :  <%= results[0][i].count %></li>
+    <% for (var i=0; i<results[3].length; i++){ %>
+        <li><%= results[3][i].summarize %>:  <%= results[3][i].count %></li>
     <% } %>    
     </ul>
-    <h2>Fruits</h2>
+    <h2>Ease of use compared to other websites?</h2>
     <ul>
     <% for (var i=0; i<results[1].length; i++){ %>
-        <li><%= results[1][i].fruit %> :  <%= results[1][i].count %></li>
+        <li><%= results[1][i].ease %>:  <%= results[1][i].count %></li>
     <% } %>    
     </ul>
-    <h2>Animals</h2>
+    <h2>Most user-friendly feature</h2>
     <ul>
     <% for (var i=0; i<results[2].length; i++){ %>
-        <li><%= results[2][i].animal %> :  <%= results[2][i].count %></li>
+        <li><%= results[2][i].feature %>:  <%= results[2][i].count %></li>
     <% } %>    
+    </ul>
+    <h2>Most noticeable colours</h2>
+    <ul>
+        <% for (var i=0; i<results[0].length; i++){ %>
+            <li><%= results[0][i].colour %>:  <%= results[0][i].count %></li>
+        <% } %>
+    </ul>
+    <h2>How well designed Amazon's delivery tracking service is, out of 100</h2>
+    <ul>
+        <% for (var i=0; i<results[4].length; i++){ %>
+            <li><%= results[4][i].tracking + "/100"%>:  <%= results[4][i].count %></li>
+        <% } %>
+    </ul>
+    <h2>Times a month you use Amazon.ca</h2>
+    <ul>
+        <% for (var i=0; i<results[5].length; i++){ %>
+            <li><%= results[5][i].usage + " times/month"%> :  <%= results[5][i].count %></li>
+        <% } %>
     </ul>
 </body>
 </html>
