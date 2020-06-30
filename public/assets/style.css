@@ -10,3 +10,9 @@ h2 {
 .form-width {
     width: 13em;
 }
+
+.my-border {
+    border-radius: 25px;
+    background: #FFCE47;
+    padding: 20px;
+}

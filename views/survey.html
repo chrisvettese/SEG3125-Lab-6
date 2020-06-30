@@ -15,58 +15,75 @@
 
 <body>
 
-<div class="container-md p-3 my-3 border bg-dark text-white" id="survey">
-    <img class='image-flex amazon-image' src="assets/amazon.png" alt="Amazon">
-    <h1>Survey - <a href="https://amazon.ca">Amazon.ca</a></h1>
+<div class="container-md p-3 my-3" id="survey">
+    <div class="my-border">
+        <img class='image-flex amazon-image' src="assets/amazon.png" alt="Amazon">
+        <h1>Survey - <a href="https://amazon.ca">Amazon.ca</a></h1>
+    </div>
     <br>
     <form>
-        <h2>Please select one or more words that you would use to summarize the UI of Amazon.ca:</h2>
-        <div class="form-check">
-            <input type="checkbox" name="summarize[]" value="Confusing"> Confusing<br>
-            <input type="checkbox" name="summarize[]" value="Simple"> Simple<br>
-            <input type="checkbox" name="summarize[]" value="Inefficient"> Inefficient<br>
-            <input type="checkbox" name="summarize[]" value="Appealing"> Appealing<br>
-            <input type="checkbox" name="summarize[]" value="Cluttered"> Cluttered<br>
+        <div class="my-border">
+            <h2>Please select one or more words that you would use to summarize the UI of Amazon.ca:</h2>
+            <div class="form-check">
+                <input type="checkbox" name="summarize[]" value="Confusing"> Confusing<br>
+                <input type="checkbox" name="summarize[]" value="Simple"> Simple<br>
+                <input type="checkbox" name="summarize[]" value="Inefficient"> Inefficient<br>
+                <input type="checkbox" name="summarize[]" value="Appealing"> Appealing<br>
+                <input type="checkbox" name="summarize[]" value="Cluttered"> Cluttered<br>
+            </div>
         </div>
         <br>
-        <h2>How does the ease of use of Amazon.ca compare to other similar websites you have visited?</h2>
-        <select class="form-control form-width" id="ease-select" name="ease">
-            <option>Easier to use</option>
-            <option>Harder to use</option>
-            <option>About the same</option>
-            <option>Unsure</option>
-        </select>
-        <br>
-        <h2>Which one of the following features did you find to be the most user-friendly?</h2>
-        <div class="form-check">
-            <label>
-                <input type="radio" name="feature" value="Home Page">
-            </label> Home Page<br>
-            <label>
-                <input type="radio" name="feature" value="Shopping Cart">
-            </label> Shopping Cart<br>
-            <label>
-                <input type="radio" name="feature" value="Search Feature">
-            </label> Search Feature<br>
-            <label>
-                <input type="radio" name="feature" value="Customer Support">
-            </label> Customer Support<br>
+        <div class="my-border">
+            <h2>How does the ease of use of Amazon.ca compare to other similar websites you have visited?</h2>
+            <select class="form-control form-width" id="ease-select" name="ease">
+                <option>Easier to use</option>
+                <option>Harder to use</option>
+                <option>About the same</option>
+                <option>Unsure</option>
+            </select>
         </div>
         <br>
-        <h2>Enter the colour(s) you noticed the most on Amazon.ca:</h2>
-        <label>
-            <input class='form-control' type="text" name="colour" placeholder="Colour" required>
-        </label>
-        <br><br>
-        <h2>Do you agree with the statement: "Amazon's delivery tracking service is well designed"?</h2>
-        Strongly disagree <input type="range" class="tracking-range" min="0" max="100" id="range" name="tracking">
-        Strongly agree
-        <br><br>
-        <h2>Enter how many times a month you use Amazon.ca:</h2>
-        <input class='form-control form-width' type="number" id='num-in' name="usage" placeholder="# of times" required
-               min="0">
-        <br><br>
-        <button type="submit" class="btn btn-warning" id="bb">Submit</button>
+        <div class="my-border">
+            <h2>Which one of the following features did you find to be the most user-friendly?</h2>
+            <div class="form-check">
+                <label>
+                    <input type="radio" name="feature" value="Home Page">
+                </label> Home Page<br>
+                <label>
+                    <input type="radio" name="feature" value="Shopping Cart">
+                </label> Shopping Cart<br>
+                <label>
+                    <input type="radio" name="feature" value="Search Feature">
+                </label> Search Feature<br>
+                <label>
+                    <input type="radio" name="feature" value="Customer Support">
+                </label> Customer Support<br>
+            </div>
+        </div>
+        <br>
+        <div class="my-border">
+            <h2>Enter the colour(s) you noticed the most on Amazon.ca:</h2>
+            <label>
+                <input class='form-control' type="text" name="colour" placeholder="Colour" required>
+            </label>
+        </div>
+        <br>
+        <div class="my-border">
+            <h2>Do you agree with the statement: "Amazon's delivery tracking service is well designed"?</h2>
+            Strongly disagree <input type="range" class="tracking-range" min="0" max="100" id="range" name="tracking">
+            Strongly agree
+        </div>
+        <br>
+        <div class="my-border">
+            <h2>Enter how many times a month you use Amazon.ca:</h2>
+            <input class='form-control form-width' type="number" id='num-in' name="usage" placeholder="# of times"
+                   required
+                   min="0">
+        </div>
+        <br>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary" id="bb">Submit</button>
+        </div>
         <p id="thanks"></p>
     </form>
 </div>
